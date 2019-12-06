@@ -75,12 +75,11 @@ nav li {
 	text-align: center;
 	margin-bottom: 50px;
 }
-/*
+
 .skill-box{
     display: flex;
-    justify-content: space-between;
-    flex-basis: 10%;
-}*/
+    justify-content: space-around;
+}
 
 img {
 	width: 100%;
