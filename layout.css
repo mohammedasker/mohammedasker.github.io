@@ -11,18 +11,19 @@ body {
 }
 
 nav {
-	background-color: #000000;
-	color: white;
+	background-color: white;
+	color: #000000;
 	position: fixed;
 	top: 0px;
 	right: 0px;
 	width: 100%;
+	box-shadow: 0px 0px 1px;
 }
 
 nav a {
 	text-decoration: none;
 	text-transform: none;
-	color: white;
+	color: #000000;
 }
 
 nav ul {
@@ -133,7 +134,37 @@ footer p{
 
 @media (max-width: 768px){
 	p {font-size: 20px;}
-	#welcome-section {margin-top: 130px;}
-	footer p{font-size: 14px;}
+	#welcome-section {
+		margin-top: 130px;}
+	footer p{
+		font-size: 14px;}
+	nav a {
+		display: none;
+	}
+	
+.menu-icon {
+	display: inline-block;
+	position: absolute;
+	top: 5px;
+	right: 15px;
+}
+.bar1, .bar2, .bar3 {
+	width: 36px;
+	height: 4px;
+	background-color: black;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .bar2 {
+	opacity: 0;
+}
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-9px, -6px);
+	-webkit-transform: rotate(45deg) translate(-9px, -6px);
+}
 }
 
