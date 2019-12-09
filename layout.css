@@ -1,5 +1,6 @@
 body {
-	font: 15px/1.5 sans-serif;
+	font: 15px;
+	font-family: sans-serif;
 	padding: 0;
 	margin: 0;
 }
@@ -8,38 +9,6 @@ body {
 	width: 80%;
 	overflow: hidden;
 	margin: auto;
-}
-
-nav {
-	background-color: white;
-	color: #000000;
-	position: fixed;
-	top: 0px;
-	right: 0px;
-	width: 100%;
-	box-shadow: 0px 0px 1px;
-}
-
-nav a {
-	text-decoration: none;
-	text-transform: none;
-	color: #000000;
-}
-
-nav ul {
-	text-decoration: none;
-	text-transform: none;
-	list-style: none;
-	float: right;
-	padding-top: 12px;
-	display: inline-block;
-}
-
-nav li {
-	float: left;
-	display: inline;
-	padding-top: 50px;
-	padding: 0 20px 0 20px;
 }
 
 #welcome-section {
@@ -69,7 +38,6 @@ nav li {
 .project-box h2 {
 	margin-top: 15px;
 }
-
 
 #skills {
 	color: black;
@@ -133,38 +101,106 @@ footer p{
 }
 
 @media (max-width: 768px){
-	p {font-size: 20px;}
-	#welcome-section {
-		margin-top: 130px;}
-	footer p{
-		font-size: 14px;}
-	nav a {
-		display: none;
+	p {font-size: 20px;
 	}
-	
-.menu-icon {
-	display: inline-block;
-	position: absolute;
-	top: 5px;
-	right: 15px;
-}
-.bar1, .bar2, .bar3 {
-	width: 36px;
-	height: 4px;
-	background-color: black;
-	margin: 6px 0;
-	transition: 0.4s;
-}
-.change .bar1 {
-	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
-	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
-}
-.change .bar2 {
-	opacity: 0;
-}
-.change .bar3 {
-	-webkit-transform: rotate(45deg) translate(-9px, -6px);
-	-webkit-transform: rotate(45deg) translate(-9px, -6px);
-}
+	#welcome-section {
+		margin-top: 130px;
+	}
+	footer p{
+		font-size: 14px;
+	}
+	.navigation {
+		width: 100%;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: white;
+		overflow: hidden;
+		transition: all 0.4s ease-in-out;
+		padding-top: 0px;
+		text-decoration: none;
+	}
+	.navigation a {
+		text-decoration: none;
+	}
+	.navigation ul {
+		text-decoration: none;
+		margin-top:30px;
+		text-align:center;
+		list-style:none; 
+		margin-left:auto;
+		margin-right:auto;
+	}
+	.menulist {
+		width:200px;
+		text-decoration: none;
+	}
+	.line1, .line2, .line3 {
+		margin-top:5px;
+		background-color:black;
+		width:25px;
+		height:3px;
+		display:block;
+		position:relative;
+		opacity:1.0;
+		border-radius:15%;
+		transition: all .3s;
+	  }
+	  .line1.active {
+		transform: rotate(270deg);
+		opacity:0.0;
+		background-color:black;
+		top:5px;
+	  }
+	  
+	  .line2.active {
+		transform: rotate(45deg);
+		background-color:black;
+	  }
+	  
+	  .line3.active {
+		transform: rotate(-45deg);
+		background-color:black;
+		top:-7px;
+	  }
+	  .menuitems {
+		padding-top:12px;
+		padding-bottom:22px;
+		text-decoration: none;
+		list-style:none; 
+		font-family: "Lato", sans-serif;
+		font-weight: 300;
+		font-size: 24px;
+		display: inline-block;
+		position:relative;  
+		text-align:center;
+		color: black;
+		opacity:0.0;
+		transition: all .5s ease-in-out;
+		text-decoration: none;
+	}
+	#closebtn {
+		height:25px;
+		width:25px; 
+		position: absolute;
+		top: 10px;
+		right: -20px;
+		text-decoration:none;
+		font-size: 36px !important;
+		margin-right: 50px;
+		z-index:100;
+		color:#fff;
+		cursor:pointer;
+		transition:background-position .3s;
+	}
+	#main { 
+		transition: margin-top .4s;
+		text-align:center;
+		margin:auto;
+		padding: 16px;
+		font-size:30px;
+		text-decoration: none;
+	}
 }
 

@@ -10,26 +10,30 @@
 	<title>Home Page - Portfolio</title>
 </head>
 <body>
+				
+
 	<div class="main">
-	<nav id="navbar">
-			<div class="menu-icon" onclick="myFunction(this)">
-					<div class="bar1"></div>
-					<div class="bar2"></div>
-					<div class="bar3"></div>
+			<div id="topNav" class="navigation">
+					<span id="closebtn" onclick="navToggle()">
+						<span class="line1"></span>
+						<span class="line2"></span>
+						<span class="line3"></span>
+					</span>
+				
+					<ul class="menulist">
+						<li><a class="menuitems" href="#welcome-section">About</a></li>
+						<li><a class="menuitems" href="#projects">Work</a></li>
+						<li><a class="menuitems" href="#skills">Skills</a></li>
+						<li><a class="menuitems" href="#contacts">Contact</a></li>
+					</ul>			
 			</div>
-		<ul>
-		<li><a href="#welcome-section">About</a></li>
-		<li><a href="#projects">Work</a></li>
-		<li><a href="#skills">Skills</a></li>
-		<li><a href="#contacts">Contact</a></li>
-		</ul>
-	</nav>
+			<div id="main"></div>
 
 <section id="welcome-section">
 	<h1>Hi, I'm Mohammed Asker</h1>
-	<p>I'm a Front-end Developer and I can help you to build a web applications that is simple, mobile-friendly, 
-	and accessible to all! I love to learn new things related to technologies everyday and share my newfound 
-	knowledge to everyone, particular to coding newbies. When not sitting in front of computer, I enjoy 
+	<p>I'm a Front-end Developer and I can help you to build a web applications that is user-friendly, mobile-responsive, 
+	and accessible to all. I love to learn new things related to technologies everyday and share my 
+	knowledge to the community. When away from the keyboard, I enjoy 
 	reading books, watch anime, and play video games.</p>
 </section>
 
@@ -79,7 +83,7 @@
 </section>
 
 <section id="skills">
-    <h1>My Skills</h1>
+    <h1>My Tech Stacks</h1>
     <div class="skill-box">
     <i class="fab fa-html5 fa-5x"></i>
     <i class="fab fa-css3-alt fa-5x"></i>
@@ -93,7 +97,7 @@
     <div class="social-media">
     <a href="https://twitter.com/mooasker" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
     <a href="https://github.com/mohammedasker" target="_blank"><i class="fab fa-github fa-3x"></i></a>
-	<a href="https://linkedin.com/mohdasker" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+	<a href="https://linkedin.com/in/mohdasker" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
     <a href="https://dev.to/mohammedasker" target="_blank"><i class="fab fa-dev fa-3x"></i></a>
 </div>
 </section>
@@ -104,9 +108,48 @@
 </div>
 
 <script>
-	function myFunction(x) {
-		x.classList.toggle("change");
-	}
-</script>
+		let nav = document.getElementById("topNav");
+		let main = document.getElementById("main");
+		let menu = document.getElementsByClassName("menuitems");
+		let close = document.getElementById("closebtn");
+		
+		//default to measure if/else from
+		nav.style.height = "50px";
+		main.style.marginTop = "50px";
+		for (i = 0; i < menu.length; i++){menu[i].style.marginTop="100px";};
+		
+		close.addEventListener("click", function(){
+		  let menuIcon = close.children;
+		  for (i = 0; i < menuIcon.length; i++){
+		  menuIcon[i].classList.toggle("active");
+		  }   
+		});
+		
+		function navToggle() {  
+		  //to close
+		  if (nav.style.height <= "275px") {
+		  nav.style.height = "50px";
+		  main.style.marginTop = "50px";
+		  
+		  let i = 0;
+		  for (i = 0; i < menu.length; i++){
+		  menu[i].style.opacity="0.0";
+		  menu[i].style.marginTop="100px";
+		  };
+		  document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
+		  } 
+		  //to open
+		  else if (nav.style.height <= "50px") {
+		  nav.style.height = "275px";
+		  main.style.marginTop = "275px";
+		  let i = 0;
+		  for (i = 0; i < menu.length; i++){
+		  menu[i].style.opacity="1.0";
+		  menu[i].style.marginTop="0px";
+		  };
+		  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+		  }
+		};
+		</script>
 </body>
 </html>
