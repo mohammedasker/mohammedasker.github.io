@@ -11,24 +11,19 @@
 </head>
 <body>
 				
-
-	<div class="main">
-			<div id="topNav" class="navigation">
-					<span id="closebtn" onclick="navToggle()">
-						<span class="line1"></span>
-						<span class="line2"></span>
-						<span class="line3"></span>
-					</span>
-				
-					<ul class="menulist">
-						<li><a class="menuitems" href="#welcome-section">About</a></li>
-						<li><a class="menuitems" href="#projects">Work</a></li>
-						<li><a class="menuitems" href="#skills">Skills</a></li>
-						<li><a class="menuitems" href="#contacts">Contact</a></li>
-					</ul>			
-			</div>
-			<div id="main"></div>
-
+<nav class="navbar">
+		<span class="navbar-toggle" id="js-navbar-toggle">
+			<i class="fas fa-bars"></i>
+		</span>
+		<a href="#" class="logo">Mohammed Asker</a>
+		<ul class="main-nav" id="js-menu">
+			<li><a href="#welcome-section" class="nav-links">About</a></li>
+			<li><a href="#projects" class="nav-links">Work</a></li>
+			<li><a href="#skills" class="nav-links">Skills</a></li>
+			<li><a href="#contacts" class="nav-links">Contact</a></li>
+		</ul>
+		</nav>
+<div class="mobile">
 <section id="welcome-section">
 	<h1>Hi, I'm Mohammed Asker</h1>
 	<p>I'm a Front-end Developer and I can help you to build a web applications that is user-friendly, mobile-responsive, 
@@ -106,50 +101,13 @@
 	<p>2019 &copy; All rights reserved.</p>
 </footer>
 </div>
-
 <script>
-		let nav = document.getElementById("topNav");
-		let main = document.getElementById("main");
-		let menu = document.getElementsByClassName("menuitems");
-		let close = document.getElementById("closebtn");
-		
-		//default to measure if/else from
-		nav.style.height = "50px";
-		main.style.marginTop = "50px";
-		for (i = 0; i < menu.length; i++){menu[i].style.marginTop="100px";};
-		
-		close.addEventListener("click", function(){
-		  let menuIcon = close.children;
-		  for (i = 0; i < menuIcon.length; i++){
-		  menuIcon[i].classList.toggle("active");
-		  }   
-		});
-		
-		function navToggle() {  
-		  //to close
-		  if (nav.style.height <= "275px") {
-		  nav.style.height = "50px";
-		  main.style.marginTop = "50px";
-		  
-		  let i = 0;
-		  for (i = 0; i < menu.length; i++){
-		  menu[i].style.opacity="0.0";
-		  menu[i].style.marginTop="100px";
-		  };
-		  document.body.style.backgroundColor = "rgba(0,0,0,0.0)";
-		  } 
-		  //to open
-		  else if (nav.style.height <= "50px") {
-		  nav.style.height = "275px";
-		  main.style.marginTop = "275px";
-		  let i = 0;
-		  for (i = 0; i < menu.length; i++){
-		  menu[i].style.opacity="1.0";
-		  menu[i].style.marginTop="0px";
-		  };
-		  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-		  }
-		};
-		</script>
+let mainNav = document.getElementById("js-menu");
+let navBarToggle = document.getElementById("js-navbar-toggle");
+
+navBarToggle.addEventListener("click", function() {
+mainNav.classList.toggle("active");
+});
+</script>
 </body>
 </html>
