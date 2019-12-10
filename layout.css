@@ -43,6 +43,10 @@ margin-top: 10px;
 margin-left: 20px;
 }
 
+.logo-position {
+	text-align: center;
+}
+
 .navbar-toggle {
 position: absolute;
 top: 10px;
@@ -136,8 +140,16 @@ a {
 }
 
 #contacts a img{
-	widows: 50px;
+	width: 50px;
 	height: 50px;
+}
+
+#skills h1{
+	margin-bottom: 15px;
+}
+
+#contacts h1{
+	margin-bottom: 15px;
 }
 
 footer p{
@@ -179,14 +191,9 @@ margin-left: 40px;
 
 .logo {
 margin-top: 0;
+margin-left: 20px;
 }
-
 .navbar-toggle {
 display: none;
-}
-
-.logo:hover,
-.nav-links:hover {
-color: rgba(255, 255, 255, 1);
 }
 }
