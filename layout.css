@@ -5,7 +5,7 @@ margin: 0;
 }
 
 body {
-font-family: "Josefin Sans", sans-serif;
+font-family: sans-serif;
 }
 
 .mobile {
@@ -18,6 +18,8 @@ font-family: "Josefin Sans", sans-serif;
 font-size: 18px;
 background-color: black;
 padding-bottom: 10px;
+position: fixed;
+width: 100%;
 }
 
 .main-nav {
@@ -33,7 +35,7 @@ color:white;
 
 .main-nav li {
 text-align: center;
-margin: 15px auto;
+margin: 18px 0 10px 35px;
 }
 
 .logo {
@@ -49,9 +51,10 @@ margin-left: 20px;
 
 .navbar-toggle {
 position: absolute;
-top: 4px;
+top: 8px;
 right: 20px;
 cursor: pointer;
+font-size: 19px;
 }
 
 .active {
@@ -59,22 +62,22 @@ display: block;
 }
 
 .bar1, .bar2, .bar3 {
-	width: 35px;
-	height: 5px;
+	width: 25px;
+	height: 2px;
 	background-color: white;
 	margin: 6px 0;
 	transition: 0.4s;
 }
 .change .bar1 {
-	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
-	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	-webkit-transform: rotate(-45deg) translate(-5px, 7px);
+	-webkit-transform: rotate(-45deg) translate(-5px, 7px);
 }
 .change .bar2 {
 	opacity: 0;
 }
 .change .bar3 {
-	-webkit-transform: rotate(45deg) translate(-8px, -8px);
-	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	-webkit-transform: rotate(45deg) translate(-5px, -8px);
+	-webkit-transform: rotate(45deg) translate(-5px, -8px);
 }
 
 #welcome-section {
@@ -103,6 +106,11 @@ display: block;
 
 .project-box h2 {
 	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.project-box {
+	margin-bottom: 50px;
 }
 
 #skills {
@@ -111,10 +119,9 @@ display: block;
 	margin-bottom: 50px;
 }
 
-.skill-box{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+.skill-box {
+	display: grid;
+	grid-template-columns: 50% 50%;
 }
 
 img {
@@ -184,34 +191,41 @@ footer p{
 	footer p{
 		font-size: 14px;
 	}
-.navbar {
-display: flex;
-justify-content: space-between;
-padding-bottom: 0;
-height: 70px;
-align-items: center;
+
+	
+.skill-box{
+	display: flex;
+	justify-content: space-around;
 }
 
-.main-nav {
-display: flex;
-margin-right: 30px;
-flex-direction: row;
-justify-content: flex-end;
-}
+	.navbar {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 0;
+	height: 70px;
+	align-items: center;
+	}
 
-.main-nav li {
-margin: 0;
-}
+	.main-nav {
+	display: flex;
+	margin-right: 30px;
+	flex-direction: row;
+	justify-content: flex-end;
+	}
 
-.nav-links {
-margin-left: 40px;
-}
+	.main-nav li {
+	margin: 0;
+	}
 
-.logo {
-margin-top: 0;
-margin-left: 20px;
-}
-.navbar-toggle {
-display: none;
-}
+	.nav-links {
+	margin-left: 40px;
+	}
+
+	.logo {
+	margin-top: 0;
+	margin-left: 20px;
+	}
+	.navbar-toggle {
+	display: none;
+	}
 }
