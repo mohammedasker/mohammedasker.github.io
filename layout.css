@@ -35,7 +35,7 @@ color:white;
 
 .main-nav li {
 text-align: center;
-margin: 18px 0 10px 35px;
+margin: 18px 0 10px 20px;
 }
 
 .logo {
@@ -84,12 +84,6 @@ display: block;
 	color: black;
 	text-align: center;
 	text-decoration: none;
-	margin-top: 90px;
-	margin-bottom: 50px;
-	padding-top: 0px;
-	margin-top: 0px;
-	display: block;
-	height: 100vh;
 }
 
 #welcome-section h1 {
@@ -186,7 +180,7 @@ footer p{
 	p {font-size: 20px;
 	}
 	#welcome-section {
-		margin-top: 130px;
+		margin-top: 20px;
 	}
 	footer p{
 		font-size: 14px;
