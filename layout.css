@@ -5,7 +5,7 @@ margin: 0;
 }
 
 body {
-font-family: sans-serif;
+font-family: 'Muli', sans-serif;
 }
 
 .mobile {
@@ -69,8 +69,8 @@ display: block;
 	transition: 0.4s;
 }
 .change .bar1 {
-	-webkit-transform: rotate(-45deg) translate(-5px, 7px);
-	-webkit-transform: rotate(-45deg) translate(-5px, 7px);
+	-webkit-transform: rotate(-45deg) translate(-4px, 7px);
+	-webkit-transform: rotate(-45deg) translate(-4px, 7px);
 }
 .change .bar2 {
 	opacity: 0;
@@ -90,6 +90,10 @@ display: block;
 	padding-top: 80px;
 	margin-top: 120px;
 	font-size: 35px;
+}
+
+#welcome-section p {
+	margin-top: 30px;
 }
 
 #projects {
