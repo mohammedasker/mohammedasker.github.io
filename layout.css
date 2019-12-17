@@ -1,11 +1,11 @@
 * {
-box-sizing: border-box;
-padding: 0;
-margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 body {
-font-family: 'Muli', sans-serif;
+	font-family: "Muli", sans-serif;
 }
 
 .mobile {
@@ -15,34 +15,34 @@ font-family: 'Muli', sans-serif;
 }
 
 .navbar {
-font-size: 18px;
-background-color: black;
-padding-bottom: 10px;
-position: fixed;
-width: 100%;
+	font-size: 18px;
+	background-color: black;
+	padding-bottom: 10px;
+	position: fixed;
+	width: 100%;
 }
 
 .main-nav {
-list-style-type: none;
-display: none;
+	list-style-type: none;
+	display: none;
 }
 
 .nav-links,
 .logo {
-text-decoration: none;
-color:white;
+	text-decoration: none;
+	color: white;
 }
 
 .main-nav li {
-text-align: center;
-margin: 18px 0 10px 20px;
+	text-align: center;
+	margin: 18px 0 10px 20px;
 }
 
 .logo {
-display: inline-block;
-font-size: 22px;
-margin-top: 10px;
-margin-left: 20px;
+	display: inline-block;
+	font-size: 22px;
+	margin-top: 10px;
+	margin-left: 20px;
 }
 
 .logo-position {
@@ -50,18 +50,20 @@ margin-left: 20px;
 }
 
 .navbar-toggle {
-position: absolute;
-top: 8px;
-right: 20px;
-cursor: pointer;
-font-size: 19px;
+	position: absolute;
+	top: 8px;
+	right: 20px;
+	cursor: pointer;
+	font-size: 19px;
 }
 
 .active {
-display: block;
+	display: block;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1,
+.bar2,
+.bar3 {
 	width: 25px;
 	height: 2px;
 	background-color: white;
@@ -87,8 +89,7 @@ display: block;
 }
 
 #welcome-section h1 {
-	padding-top: 80px;
-	margin-top: 120px;
+	margin-top: 100px;
 	font-size: 35px;
 }
 
@@ -99,10 +100,9 @@ display: block;
 #projects {
 	color: #000000;
 	text-align: center;
-	margin-bottom: 50px;
 }
 
-.project-box h2 {
+.project-box h3 {
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
@@ -162,68 +162,68 @@ a {
 	margin-right: 15px;
 }
 
-#contacts a img{
+#contacts a img {
 	width: 50px;
 	height: 50px;
 }
 
-#skills h1{
+#skills h1 {
 	margin-bottom: 15px;
 }
 
-#contacts h1{
+#contacts h1 {
 	margin-bottom: 15px;
 }
 
-footer p{
+footer p {
 	font-size: 14px;
 	margin-bottom: 15px;
 }
 
 @media screen and (min-width: 768px) {
-	p {font-size: 20px;
+	p {
+		font-size: 20px;
 	}
-	#welcome-section {
-		margin-top: 20px;
+	#welcome-section h1 {
+		margin-top: 180px;
 	}
-	footer p{
+	footer p {
 		font-size: 14px;
 	}
 
-	
-.skill-box{
-	display: flex;
-	justify-content: space-around;
-}
+	.skill-box {
+		display: flex;
+		justify-content: space-around;
+	}
 
 	.navbar {
-	display: flex;
-	justify-content: space-between;
-	padding-bottom: 0;
-	height: 70px;
-	align-items: center;
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 0;
+		height: 70px;
+		align-items: center;
 	}
 
 	.main-nav {
-	display: flex;
-	margin-right: 30px;
-	flex-direction: row;
-	justify-content: flex-end;
+		display: flex;
+		margin-right: 30px;
+		flex-direction: row;
+		justify-content: flex-end;
 	}
 
 	.main-nav li {
-	margin: 0;
+		margin: 0;
 	}
 
 	.nav-links {
-	margin-left: 40px;
+		margin-left: 40px;
 	}
 
 	.logo {
-	margin-top: 0;
-	margin-left: 20px;
+		margin-top: 0;
+		margin-left: 20px;
 	}
 	.navbar-toggle {
-	display: none;
+		display: none;
 	}
 }
