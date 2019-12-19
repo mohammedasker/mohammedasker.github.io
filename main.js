@@ -5,6 +5,6 @@ navBarToggle.addEventListener("click", function() {
 	mainNav.classList.toggle("active");
 });
 // toggle the menu bar
-function myFunction(x) {
-	x.classList.toggle("change");
+function myFunction(toggleMenu) {
+	toggleMenu.classList.toggle("change");
 }
