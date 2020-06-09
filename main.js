@@ -1,10 +1,29 @@
-let mainNav = document.getElementById("js-menu");
-let navBarToggle = document.getElementById("js-navbar-toggle");
-// toggle drop down menu
-navBarToggle.addEventListener("click", function() {
-	mainNav.classList.toggle("active");
-});
-// toggle the menu bar
-function myFunction(toggleMenu) {
-	toggleMenu.classList.toggle("change");
+// Toggle the menu bar when it's clicked
+function openNav() {
+	document.getElementById("navbar").style.height = "100%";
 }
+
+function closeNav() {
+	document.getElementById("navbar").style.height = "0%";
+}
+
+// Close the menu when the menu links are clicked
+document.querySelector(".homeMenu").addEventListener("click", function () {
+	document.getElementById("navbar").style.height = "0%";
+});
+
+document.querySelector(".aboutMenu").addEventListener("click", function () {
+	document.getElementById("navbar").style.height = "0%";
+});
+
+document.querySelector(".skillsMenu").addEventListener("click", function () {
+	document.getElementById("navbar").style.height = "0%";
+});
+
+document.querySelector(".projectMenu").addEventListener("click", function () {
+	document.getElementById("navbar").style.height = "0%";
+});
+
+document.querySelector(".contactMenu").addEventListener("click", function () {
+	document.getElementById("navbar").style.height = "0%";
+});

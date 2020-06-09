@@ -8,13 +8,60 @@
 			content="width=device-width,initial-scale=1, maximum-scale=5"
 		/>
 		<meta name="HandheldFriendly" content="true" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href=".assets/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./assets/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="./site.webmanifest" />
+
+		<!-- Primary Meta Tags -->
+		<title>Mohammed Asker — Front-end Developer</title>
+		<meta name="title" content="Mohammed Asker — Front-end Developer" />
 		<meta
 			name="description"
-			content="Front-End Developer Building Websites and Web Applications"
+			content="Front-end Developer specialized in building a user-friendly, mobile-responsive, and accessible websites and web applications."
+		/>
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://metatags.io/" />
+		<meta property="og:title" content="Mohammed Asker — Front-end Developer" />
+		<meta
+			property="og:description"
+			content="I'm a Front-end Developer specialized in building a user-friendly, mobile-responsive, and accessible websites and web applications. My skills include HTML, CSS, JavaScript, React, Bootstrap, and Git."
 		/>
 		<meta
-			name="keywords"
-			content="web design, web development, programmer, developer, front end developer"
+			property="og:image"
+			content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+		/>
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://metatags.io/" />
+		<meta
+			property="twitter:title"
+			content="Mohammed Asker — Front-end Developer"
+		/>
+		<meta
+			property="twitter:description"
+			content="I'm a Front-end Developer specialized in building a user-friendly, mobile-responsive, and accessible websites and web applications. My skills include HTML, CSS, JavaScript, React, Bootstrap, and Git."
+		/>
+		<meta
+			property="twitter:image"
+			content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
 		/>
 		<link rel="stylesheet" type="text/css" href="layout.css" />
 		<link
@@ -27,15 +74,11 @@
 			rel="noopener"
 			href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
 		/>
-		<title>Mohammed Asker - Front-End Developer</title>
 	</head>
 	<body>
+		<!---- Header ---->
 		<nav class="navbar">
-			<div
-				class="navbar-toggle"
-				id="js-navbar-toggle"
-				onclick="myFunction(this)"
-			>
+			<div class="navbar-toggle" onclick="openNav()">
 				<div class="bar1"></div>
 				<div class="bar2"></div>
 				<div class="bar3"></div>
@@ -43,31 +86,61 @@
 			<div class="logo-position">
 				<a href="#" class="logo">Mohammed Asker</a>
 			</div>
-			<ul class="main-nav" id="js-menu">
-				<li><a href="#" class="nav-links">About</a></li>
-				<li><a href="#projects" class="nav-links">Work</a></li>
+			<ul class="main-nav">
+				<li><a href="#" class="nav-links">Home</a></li>
+				<li><a href="#about" class="nav-links">About</a></li>
+				<li><a href="#project-header" class="nav-links">Works</a></li>
 				<li><a href="#skills" class="nav-links">Skills</a></li>
-				<li><a href="#contacts" class="nav-links">Contact</a></li>
+				<li><a href="#contact" class="nav-links">Contact</a></li>
 			</ul>
 		</nav>
-		<div class="mobile">
-			<section id="welcome-section">
-				<h1>Hi, I'm Mohammed Asker</h1>
-				<p>
-					I'm a Front-end Developer building an user-friendly,
-					mobile-responsive, and accessible web applications. I love to learn
-					new technologies everyday and share my knowledge to the community.
-					When away from the computer, I enjoy reading books, watch anime, and
-					play video games.
-				</p>
-			</section>
 
-			<section id="projects">
+		<div id="navbar" class="overlay">
+			<a href="javascript:void(0)" class="closeButton" onclick="closeNav()"
+				>&times;</a
+			>
+			<div class="overlay-content">
+				<a href="#" class="homeMenu">Home</a>
+				<a href="#about" class="aboutMenu">About</a>
+				<a href="#project-header" class="projectMenu">Works</a>
+				<a href="#skills" class="skillsMenu">Skill</a>
+				<a href="#contact" class="contactMenu">Contact</a>
+			</div>
+		</div>
+
+		<!---- Main Body ---->
+		<div class="container">
+			<section id="welcome-section">
+				<h1>Hi, there! I'm Mohammed Asker</h1>
+			</section>
+			<section id="about">
+				<h1 class="about-header">About me</h1>
+				<p>
+					I'm a Front-End Developer specialized in building a user-friendly,
+					mobile-responsive, and accessible websites and web applications. I
+					like to learn new technologies every day and share the things I've
+					learnt on
+					<a href="https://dev.to/mohammedasker" class="welcome-link">DEV</a>.
+					<br /><br />
+					When I'm away from the keyboards, I love to watch anime, reading
+					books, and play video games. I am now available for freelance
+					opportunities and if you are a business looking for an online
+					presence, you can get in touch with me today.
+				</p>
+				<a href="#contact" class="button-link"
+					><button class="about-button">Contact me</button></a
+				>
+			</section>
+			<h1 id="project-header">My Works</h1>
+			<p>Here are some projects that I have worked recently.</p>
+			<section class="projects">
 				<div class="project-box">
-					<h1 class="project-title">Portfolio</h1>
 					<h3>Readwits</h3>
+					<p class="project-text">
+						A simple book finder web app built with vanilla JavaScript.
+					</p>
 					<img
-						src="./img/stock6.png"
+						src="./assets/readwits.png"
 						alt="A screenshot of book finder web app used for displaying my work"
 					/>
 					<a href="https://mohammedasker.github.io/Readwits/"
@@ -79,8 +152,11 @@
 				</div>
 				<div class="project-box">
 					<h3>Dropwit</h3>
+					<p class="project-text">
+						Fictional company website built to practice HTML and CSS.
+					</p>
 					<img
-						src="./img/stock1.png"
+						src="./assets/dropwit.png"
 						alt="A screenshot of fictional logistic startup website used for displaying my work"
 					/>
 					<a href="https://mohammedasker.github.io/Dropwit/" rel="noopener"
@@ -92,8 +168,11 @@
 				</div>
 				<div class="project-box">
 					<h3>NotesApp</h3>
+					<p class="project-text">
+						A simple note-taking web app built with vanilla JavaScript.
+					</p>
 					<img
-						src="./img/stock2.png"
+						src="./assets/notesapp.png"
 						alt="A screenshot of note taking web app used for displaying my work"
 					/>
 					<a href="https://mohammedasker.github.io/NotesApp//" rel="noopener"
@@ -104,41 +183,36 @@
 					>
 				</div>
 				<div class="project-box">
-					<h3>Landing Page</h3>
+					<h3>Devtoo</h3>
+					<p class="project-text">
+						A clone DEV Community homepage built to practice React.
+					</p>
 					<img
-						src="./img/stock3.png"
-						alt="A screenshot of energy drink landing page used for displaying my work"
+						src="./assets/devtoo.png"
+						alt="A screenshot of devtoo used for displaying my work"
 					/>
-					<a href="https://mohammedasker.github.io/LandingPage/" rel="noopener"
+					<a href=" https://devtoo.netlify.app/" rel="noopener"
 						><button>View Live</button></a
 					>
-					<a href="https://github.com/mohammedasker/LandingPage" rel="noopener"
+					<a href="https://github.com/mohammedasker/devtoo" rel="noopener"
 						><button>View Code</button></a
 					>
 				</div>
 				<div class="project-box">
-					<h3>HTML Documentation Page</h3>
+					<h3>Portfolio</h3>
+					<p class="project-text">
+						My personal portfolio website built to showcase my works.
+					</p>
 					<img
-						src="./img/stock4.png"
-						alt="A screenshot of HTML documentation page used for displaying my work"
+						src="./assets/portfolio.png"
+						alt="A screenshot of my portfolio website for displaying my work"
 					/>
-					<a href="https://mohammedasker.github.io/HTMLdocs/" rel="noopener"
+					<a href="https://mohammedasker.github.io/" rel="noopener"
 						><button>View Live</button></a
 					>
-					<a href="https://github.com/mohammedasker/HTMLdocs/" rel="noopener"
-						><button>View Code</button></a
-					>
-				</div>
-				<div class="project-box">
-					<h3>Survey Page</h3>
-					<img
-						src="./img/stock5.png"
-						alt="A screenshot of survey page used for displaying my work"
-					/>
-					<a href="https://mohammedasker.github.io/SurveyPage/" rel="noopener"
-						><button>View Live</button></a
-					>
-					<a href="https://github.com/mohammedasker/SurveyPage/" rel="noopener"
+					<a
+						href="https://github.com/mohammedasker/mohammedasker.github.io"
+						rel="noopener"
 						><button>View Code</button></a
 					>
 				</div>
@@ -160,48 +234,97 @@
 						<p>JavaScript</p>
 					</div>
 					<div class="box">
+						<i class="fab fa-react fa-5x"></i>
+						<p>React.js</p>
+					</div>
+					<div class="box">
+						<i class="fab fa-bootstrap fa-5x"></i>
+						<p>Bootstrap</p>
+					</div>
+					<div class="box">
 						<i class="fab fa-git-alt fa-5x"></i>
 						<p>Git</p>
 					</div>
 				</div>
 			</section>
 
-			<section id="contacts">
-				<h1>Get in touch</h1>
+			<section id="contact">
+				<h1>Contact</h1>
+				<p>
+					Got a website idea and want to turn it into a reality? Let's make it
+					happen!
+				</p>
+				<div>
+					<form
+						class="contact-form"
+						action="https://formspree.io/xpzydbja"
+						method="POST"
+					>
+						<div class="input-box">
+							<input
+								type="text"
+								class="first-name"
+								name="first-name"
+								placeholder="First name"
+								required
+							/><br />
+							<input
+								type="email"
+								class="email"
+								name="email"
+								placeholder="Email"
+								required
+							/>
+						</div>
+						<textarea
+							class="message"
+							name="message"
+							aria-label="message"
+							placeholder="Message"
+							required
+						></textarea>
+					</form>
+					<button type="submit">Send</button>
+				</div>
+			</section>
+
+			<footer>
 				<div class="social-media">
 					<a
 						href="https://twitter.com/mooasker"
 						target="_blank"
 						aria-label="Go to my Twitter profile"
 						rel="noopener"
-						><i class="fab fa-twitter fa-2x"></i
+						><i class="fab fa-twitter socialmedia-icons fa-2x"></i
 					></a>
 					<a
 						href="https://github.com/mohammedasker"
 						target="_blank"
 						aria-label="Go to my Github profile"
 						rel="noopener"
-						><i class="fab fa-github fa-2x"></i
+						><i class="fab fa-github socialmedia-icons fa-2x"></i
 					></a>
 					<a
 						href="https://linkedin.com/in/mohdasker"
 						target="_blank"
-						aria-label="Go to my Linkedin profile"
+						aria-label="Go to my LinkedIn profile"
 						rel="noopener"
-						><i class="fab fa-linkedin fa-2x"></i
+						><i class="fab fa-linkedin socialmedia-icons fa-2x"></i
 					></a>
 					<a
 						href="https://dev.to/mohammedasker"
 						target="_blank"
 						aria-label="Go to my DEV profile"
 						rel="noopener"
-						><i class="fab fa-dev fa-2x"></i
+						><i class="fab fa-dev socialmedia-icons fa-2x"></i
 					></a>
 				</div>
-			</section>
-
-			<footer>
-				<p>2020 &copy; All rights reserved.</p>
+				<p class="footer-text">
+					<script type="text/javascript">
+						document.write(new Date().getFullYear());
+					</script>
+					&copy; Mohammed Asker.
+				</p>
 			</footer>
 		</div>
 		<script src="main.js"></script>
