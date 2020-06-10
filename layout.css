@@ -161,7 +161,7 @@ body {
 	margin-bottom: 15px;
 }
 
-.about-button {
+#about .about-button {
 	margin: auto;
 	display: block;
 }
@@ -196,6 +196,7 @@ body {
 	border-radius: 5px;
 	margin-bottom: 50px;
 	padding: 10px;
+	width: 97%;
 	flex-basis: none;
 	transition: 0.2s;
 }
@@ -230,12 +231,14 @@ img {
 	display: block;
 }
 
-button {
+.project-button,
+.contact-button,
+.about-button {
 	background-color: white;
 	border: 1px solid #000000;
 	color: #000000;
 	padding: 12px;
-	width: 120px;
+	width: 40%;
 	height: 40px;
 	cursor: pointer;
 	border-radius: 5px;
@@ -338,6 +341,11 @@ p {
 	.project-title {
 		padding-top: 100px;
 		padding-bottom: 15px;
+	}
+
+	.about-button,
+	.contact-button {
+		width: 15%;
 	}
 
 	footer p {
