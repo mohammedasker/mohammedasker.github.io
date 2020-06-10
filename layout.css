@@ -196,7 +196,7 @@ body {
 	border-radius: 5px;
 	margin-bottom: 50px;
 	padding: 10px;
-	width: 97%;
+	width: 90%;
 	flex-basis: none;
 	transition: 0.2s;
 }
@@ -239,6 +239,7 @@ img {
 	color: #000000;
 	padding: 12px;
 	width: 40%;
+	font-size: 0.7em;
 	height: 40px;
 	cursor: pointer;
 	border-radius: 5px;
