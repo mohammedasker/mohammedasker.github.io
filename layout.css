@@ -136,8 +136,22 @@ body {
 	font-size: 35px;
 }
 
-#welcome-section p {
+.about-text {
 	margin-top: 30px;
+	text-align: left;
+}
+
+.about-image {
+	border-radius: 5%;
+	max-width: 300px;
+	width: 80%;
+	height: auto;
+}
+
+.about-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .welcome-link {
@@ -179,6 +193,16 @@ body {
 	justify-content: space-around;
 }
 
+.project-box {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	margin-bottom: 50px;
+	padding: 10px;
+	width: 90%;
+	flex-basis: none;
+	transition: 0.2s;
+}
+
 .project-box h3 {
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -191,19 +215,8 @@ body {
 	font-size: 1.5em;
 }
 
-.project-box {
-	box-shadow: 0px 0px 0.5px 0.5px #888888;
-	border-radius: 5px;
-	margin-bottom: 50px;
-	padding: 10px;
-	width: 90%;
-	flex-basis: none;
-	transition: 0.2s;
-}
-
 .project-box:hover {
-	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-		0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 #skills {
@@ -349,6 +362,15 @@ p {
 		width: 15%;
 	}
 
+	.about-container {
+		flex-direction: row;
+	}
+
+	.about-image {
+		margin-right: 70px;
+		margin-left: 60px;
+	}
+
 	footer p {
 		font-size: 14px;
 	}
@@ -406,6 +428,12 @@ p {
 	.first-name,
 	.email {
 		width: 48%;
+	}
+
+	.project-button,
+	.contact-button,
+	.about-button {
+		font-size: 1em;
 	}
 }
 
