@@ -180,8 +180,22 @@ body {
 	display: block;
 }
 
-.button-link {
+.contact-link {
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+
+.contact-link-style {
 	text-decoration: none;
+	font-weight: bold;
+	color: black;
+	transition: 0.2s;
+	font-size: 1.2em;
+}
+
+.contact-link-style:hover {
+	color: gray;
 }
 
 /****** Works ******/

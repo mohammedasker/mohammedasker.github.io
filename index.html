@@ -110,7 +110,11 @@
 			<section id="about">
 				<h1 class="about-header">About me</h1>
 				<div class="about-container">
-					<img src="./assets/guywithglasses.jpg" class="about-image" />
+					<img
+						src="./assets/guywithglasses.jpg"
+						class="about-image"
+						aria-label="portrait of mohammed asker"
+					/>
 					<p class="about-text">
 						I'm a Front-End Developer specialized in building a user-friendly,
 						mobile-responsive, and accessible websites and web applications. My
@@ -128,9 +132,9 @@
 						me today.
 					</p>
 				</div>
-				<a href="#contact" class="button-link"
-					><button class="about-button">Contact me</button></a
-				>
+				<p class="contact-link">
+					<a href="#contact" class="contact-link-style">Contact me &#187; </a>
+				</p>
 			</section>
 			<h1 id="project-header">My Works</h1>
 			<p>Here are some projects that I have worked recently.</p>
@@ -279,13 +283,14 @@
 						class="contact-form"
 						action="https://formspree.io/xpzydbja"
 						method="POST"
+						aria-label="contact-form"
 					>
 						<div class="input-box">
 							<input
 								type="text"
 								class="first-name"
 								name="first-name"
-								label="first-name"
+								aria-label="first-name"
 								placeholder="First name"
 								required
 							/><br />
@@ -293,7 +298,7 @@
 								type="email"
 								class="email"
 								name="email"
-								label="email"
+								aria-label="email"
 								placeholder="Email"
 								required
 							/>
@@ -301,7 +306,7 @@
 						<textarea
 							class="message"
 							name="message"
-							label="message"
+							aria-label="message"
 							placeholder="Message"
 							required
 						></textarea>
