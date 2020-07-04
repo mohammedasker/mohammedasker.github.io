@@ -1,4 +1,5 @@
 /****** Body ******/
+/****** This is mobile-first designation ******/
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -175,27 +176,25 @@ body {
 	margin-bottom: 15px;
 }
 
-#about .about-button {
-	margin: auto;
-	display: block;
-}
-
-.contact-link {
+.link-button {
+	text-decoration: none;
 	text-align: center;
 	display: block;
 	margin: 0 auto;
-}
-
-.contact-link-style {
-	text-decoration: none;
-	font-weight: bold;
-	color: black;
+	background-color: white;
+	border: 1px solid #000000;
+	color: #000000;
+	padding: 12px;
+	width: 40%;
+	font-size: 0.7em;
+	cursor: pointer;
+	border-radius: 5px;
 	transition: 0.2s;
-	font-size: 1.2em;
 }
 
-.contact-link-style:hover {
-	color: gray;
+.link-button:hover {
+	background-color: black;
+	color: white;
 }
 
 /****** Works ******/
@@ -267,7 +266,6 @@ img {
 	padding: 12px;
 	width: 40%;
 	font-size: 0.7em;
-	height: 40px;
 	cursor: pointer;
 	border-radius: 5px;
 	margin: 20px 0px 0px 0px;
@@ -358,8 +356,8 @@ p {
 	margin-bottom: 15px;
 }
 
-/****** Mobile responsive ******/
-@media screen and (min-width: 768px) {
+/****** Desktop responsive ******/
+@media (min-width: 900px) {
 	p {
 		font-size: 20px;
 	}
@@ -371,7 +369,7 @@ p {
 		padding-bottom: 15px;
 	}
 
-	.about-button,
+	.link-button,
 	.contact-button {
 		width: 15%;
 	}
@@ -446,7 +444,7 @@ p {
 
 	.project-button,
 	.contact-button,
-	.about-button {
+	.link-button {
 		font-size: 1em;
 	}
 }
